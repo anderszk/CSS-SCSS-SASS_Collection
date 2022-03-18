@@ -1,0 +1,59 @@
+/*This is a cool navbar which animates square corners that "expends" and fades in when :hover on items.*/
+
+/*Style list and anchor elements*/
+.navbar li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0 1em;
+  padding: 0;
+}
+.navbar a {
+  padding: 0.5em 0.8em;
+  margin: 0.3em 13;
+  display: block;
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  text-decoration: none;
+}
+
+/*Adding the animation to the elements*/
+.navbar a:before,
+.navbar a:after {
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  content: '';
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  opacity: 0;
+}
+.navbar a:before {
+  left: -7px;
+  top: -1px;
+  border-left: 3px solid #74959A;
+  border-top: 3px solid #74959A;
+  -webkit-transform: translate(100%, 50%);
+  transform: translate(100%, 50%);
+}
+.navbar a:after {
+  right: -7px;
+  bottom: 1px;
+  border-right: 3px solid #74959A;
+  border-bottom: 3px solid #74959A;
+  -webkit-transform: translate(-100%, -50%);
+  transform: translate(-100%, -50%);
+}
+
+/*Determine the style using different states eg. hover:*/
+.navbar a:hover,
+.navbar .current a {
+  color: #000000;
+}
+.navbar a:hover:before,
+.navbar .current a:before,
+.navbar a:hover:after,
+.navbar .current a:after {
+  -webkit-transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+  opacity: 1;
+}
