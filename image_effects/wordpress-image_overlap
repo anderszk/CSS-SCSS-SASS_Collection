@@ -1,0 +1,9 @@
+.overlap-pic {
+	position:relative;
+	top:4.4em;
+	left:40%;
+	width: 440px;
+	padding:5px
+}
+
+/*TODO: add @media query for phone so the image appears underneeth the picture instead.*/
