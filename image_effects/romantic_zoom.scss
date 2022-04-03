@@ -13,7 +13,7 @@ HTML:
 </div>
 */
 
-// GENERAL STUFFS
+/* GENERAL STUFFS */
 
 body{
   background:#111111;
@@ -42,7 +42,7 @@ img{
   transition:2s ease;
 }
 
-// HOVER ANIMATION
+/* HOVER ANIMATION */
 
 .frame{
   &:hover .pic1{
@@ -81,6 +81,16 @@ img{
 }
 
 .mist2{
+  height:200px;
+  position:absolute;
+  top:300px;
+  left:-100%;
+  width:2000px;
+  -webkit-filter:blur(2px);
+  transition:60s linear;
+}
+
+.mist3{
   height:200px;
   position:absolute;
   top:300px;
